@@ -76,19 +76,34 @@ with left_column:
     image = Image.open('ayush.jpg')
     st.image(image, width=200)
     st.write("# AYUSH JHA")
+    a,b,c,d = st.columns([1,1,1,1])
+    with a:
+       img1 = Image.open('linkedin.png')
+       st.write(img1, width=20)
+    with b:
+       img2 = Image.open('phone.png')
+       st.write(img2, width=20)
+    with c:
+       img3 = Image.open('gmail.png')
+       st.write(img3, width=20)
+    with d:
+       img4 = Image.open('github1.png')
+       st.write(img4, width=30)
+
     if st.button("EDUCATION"):
         st.session_state.current_section = 'Profile'
     if st.button("EXPERIENCE"):
         st.session_state.current_section = 'Experience'
+    
     if st.button("ACHIEVEMENTS"):
         st.session_state.current_section = 'Education'
-    if st.button("SKILLS"):
+    if st.button("TECHNICAL SKILLS"):
         st.session_state.current_section = 'Skills'
 
 # Content in the right column based on the selected section
 with right_column:
     if st.session_state.current_section == 'Profile':
-       st.markdown('<div class="centered-text"><h1>Education</h1></div>', unsafe_allow_html=True)
+       st.markdown('<div class="centered-text"><h1>EDUCATION</h1></div>', unsafe_allow_html=True)
        txt('Third year Information Technology student pursuing B.Tech from **Kamla Nehru Institute of Technology**, Sultanpur','CGPA:`8.7`')
        st.markdown('''
             - Intermediate :
@@ -100,11 +115,11 @@ with right_column:
        txt('D.A.V Senior Secondary Public school, Anpara     ','       Percentage:`97.8`')
 
     elif st.session_state.current_section == 'Experience':
-        st.write("## EXPERIENCE")
-        st.write("This section showcases the user's work experience. Include job titles, companies, years of work, and responsibilities.")
+       st.markdown('<div class="centered-text"><h1>EXPERIENCE</h1></div>', unsafe_allow_html=True)
+       st.write("This section showcases the user's work experience. Include job titles, companies, years of work, and responsibilities.")
     elif st.session_state.current_section == 'Education':
-        st.write("## ACHIEVEMENTS")
+        st.markdown('<div class="centered-text"><h1>ACHIEVEMENTS</h1></div>', unsafe_allow_html=True)
         st.write("This section covers the user's educational background. Include degrees, institutions, years attended, and honors.")
     elif st.session_state.current_section == 'Skills':
-        st.write("## SKILLS")
+        st.markdown('<div class="centered-text"><h1>TECHNICAL SKILLS</h1></div>', unsafe_allow_html=True)
         st.write("This section highlights the user's skills. List out technical, interpersonal, and other relevant skills.")
