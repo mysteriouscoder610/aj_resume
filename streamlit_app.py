@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+
 # Set the layout of the page
 st.set_page_config(layout="wide")
 
@@ -7,18 +8,12 @@ st.set_page_config(layout="wide")
 if 'current_section' not in st.session_state:
     st.session_state.current_section = 'Profile'
 
-# Create two columns, with the left column taking 25% of the width and the right column 75%
-left_column, right_column = st.columns([1,0.2, 4])
+# Create three columns: left column, spacer, and right column
+left_column, spacer, right_column = st.columns([1, 0.1, 4])
 
 # Custom CSS to style the buttons to look like resume sections
 st.markdown("""
     <style>
-    # div[data-testid="column"]:nth-of-type(1) {
-    #     background-color: lightblue;
-    #     height: 100vh;
-    #     padding: 10px;
-    #     display: flex;
-    # }
     .stButton > button {
         width: 100%;
         margin-bottom: 10px;
@@ -38,12 +33,6 @@ st.markdown("""
         color: blue;
         border: 2px solid black;
     }
-
-    # .stButton > button:active {
-    #     background-color: blue;
-    #     color: black;
-    #     border: 2px solid blue;
-    # }
     </style>
 """, unsafe_allow_html=True)
 
