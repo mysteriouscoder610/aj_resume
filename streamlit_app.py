@@ -33,6 +33,9 @@ st.markdown("""
         color: blue;
         border: 2px solid black;
     }
+    .centered-text {
+    text-align: center;
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -85,13 +88,17 @@ with left_column:
 # Content in the right column based on the selected section
 with right_column:
     if st.session_state.current_section == 'Profile':
-       st.markdown('''
-        ## Education
-        ''')
-       
-       txt('**Doctor of Philosophy** (Medical Technology), *Mahidol University*, Thailand',
-            '2002-2006')
+       st.markdown('<div class="centered-text"><h1>Education</h1></div>', unsafe_allow_html=True)
        txt('Third year Information Technology student pursuing B.Tech from **Kamla Nehru Institute of Technology**, Sultanpur','CGPA:`8.7`')
+       st.markdown('''
+            - Intermediate :
+                   ''')
+       txt('D.A.V Senior Secondary Public school, Anpara'            ,'Percentage:`91.2`')
+       st.markdown('''            
+            - High School :
+            ''')
+       txt('D.A.V Senior Secondary Public school, Anpara     ','       Percentage:`97.8`')
+
     elif st.session_state.current_section == 'Experience':
         st.write("## EXPERIENCE")
         st.write("This section showcases the user's work experience. Include job titles, companies, years of work, and responsibilities.")
