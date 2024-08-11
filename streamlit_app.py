@@ -22,34 +22,20 @@ st.info('''
 ''')
 
 #####################
-# Vertical Navigation Bar on the right
+# Navigation
+
 st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
 
 st.markdown("""
-<style>
-  .navbar {
-    background-color: black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 250px;
-  }
-  .navbar-brand {
-    font-size: 3rem;
-            
-  }
-  .navbar-nav .nav-item .nav-link {
-    font-size: 1.25em;
-    padding: 15px 10px;
-  }
-</style>
-<nav class="navbar navbar-expand-lg navbar-dark flex-column" style="background-color: #008B8B; position: fixed; left: 0; top: 0; height: 100vh; width: 300px;">
-  <div class="navbar-brand">AYUSH JHA</div>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #16A2CB;">
+  <a class="navbar-brand" href="https://youtube.com/dataprofessor" target="_blank">Chanin Nantasenamat</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav flex-column">
-      <li class="nav-item">
-        <a class="nav-link disabled" href="/">Home</a>
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link disabled" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#education">Education</a>
@@ -71,38 +57,38 @@ st.markdown("""
 #####################
 # Custom function for printing text
 def txt(a, b):
-    col1, col2 = st.columns([6, 1])
-    with col1:
-        st.markdown(a)
-    with col2:
-        st.markdown(b)
+  col1, col2 = st.columns([6,1])
+  with col1:
+    st.markdown(a)
+  with col2:
+    st.markdown(b)
 
 def txt2(a, b):
-    col1, col2 = st.columns([1, 4])
-    with col1:
-        st.markdown(f'`{a}`')
-    with col2:
-        st.markdown(b)
+  col1, col2 = st.columns([1,4])
+  with col1:
+    st.markdown(f'`{a}`')
+  with col2:
+    st.markdown(b)
 
 def txt3(a, b):
-    col1, col2 = st.columns([1, 2])
-    with col1:
-        st.markdown(a)
-    with col2:
-        st.markdown(b)
-
+  col1, col2 = st.columns([1,2])
+  with col1:
+    st.markdown(a)
+  with col2:
+    st.markdown(b)
+  
 def txt4(a, b, c):
-    col1, col2, col3 = st.columns([1.5, 2, 2])
-    with col1:
-        st.markdown(f'`{a}`')
-    with col2:
-        st.markdown(b)
-    with col3:
-        st.markdown(c)
+  col1, col2, col3 = st.columns([1.5,2,2])
+  with col1:
+    st.markdown(f'`{a}`')
+  with col2:
+    st.markdown(b)
+  with col3:
+    st.markdown(c)
 
 #####################
 st.markdown('''
-# :red[Education]
+## :red[Education]
 ''')
 
 txt('**Doctor of Philosophy** (Medical Technology), *Mahidol University*, Thailand',
@@ -123,7 +109,7 @@ st.markdown('''
 
 #####################
 st.markdown('''
-# Work Experience
+## Work Experience
 ''')
 
 txt('**Head, Center of Data Mining and Biomedical Informatics**, Faculty of Medical Technology, Mahidol University, Thailand',
