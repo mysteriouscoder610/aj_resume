@@ -8,7 +8,7 @@ if 'current_section' not in st.session_state:
     st.session_state.current_section = 'Profile'
 
 # Create two columns, with the left column taking 25% of the width and the right column 75%
-left_column, right_column = st.columns([1, 4])
+left_column, right_column = st.columns([1,0.2, 4])
 
 # Custom CSS to style the buttons to look like resume sections
 st.markdown("""
