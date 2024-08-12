@@ -8,9 +8,6 @@ st.set_page_config(layout="wide")
 if 'current_section' not in st.session_state:
     st.session_state.current_section = 'Profile'
 
-# Create three columns: left column, spacer, and right column
-left_column, spacer, right_column = st.columns([1, 0.5, 4])
-
 # Custom CSS to style the buttons to look like resume sections
 st.markdown("""
     <style>
@@ -26,6 +23,9 @@ st.markdown("""
         text-transform: uppercase;
         cursor: pointer;
         transition: background-color 0.3s, border-color 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: left;
     }
 
     .stButton > button:hover {
@@ -33,12 +33,16 @@ st.markdown("""
         color: blue;
         border: 2px solid black;
     }
+
+    .stButton > button img {
+        margin-right: 10px;
+    }
+
     .centered-text {
         text-align: center;
     }
     </style>
 """, unsafe_allow_html=True)
-
 
 # Custom function for printing text
 def txt(a, b):
@@ -72,39 +76,25 @@ def txt4(a, b, c):
         st.markdown(c)
 
 # Add buttons to the left column (like a resume section)
+left_column, spacer, right_column = st.columns([1, 0.5, 4])
+
 with left_column:
     
-    image = Image.open('sagun.jpg')
+    image = Image.open('ayush1.jpg')
     st.image(image, width=200)
 
     st.write("# AYUSH JHA")
-    
 
-    if st.button("EDUCATION"):
+    if st.button("📝 EDUCATION"):
         st.session_state.current_section = 'Profile'
-    if st.button("EXPERIENCE"):
+    if st.button("💼 EXPERIENCE"):
         st.session_state.current_section = 'Experience'
-    if st.button("ACHIEVEMENTS"):
+    if st.button("🏆 ACHIEVEMENTS"):
         st.session_state.current_section = 'Education'
-    if st.button("TECHNICAL SKILLS"):
+    if st.button("💻 TECHNICAL SKILLS"):
         st.session_state.current_section = 'Skills'
-    if st.button("CONTACT"):
+    if st.button("📞 CONTACT"):
         st.session_state.current_section = 'Contact'
-
-    
-    # a, b, c, d = st.columns([1, 1, 1, 1])
-    # with a:
-    #     img1 = Image.open('linkedin.png')
-    #     st.image(img1, width=20)
-    # with b:
-    #     img2 = Image.open('phone.png')
-    #     st.image(img2, width=20)
-    # with c:
-    #     img3 = Image.open('gmail.png')
-    #     st.image(img3, width=20)
-    # with d:
-    #     img4 = Image.open('github1.png')
-    #     st.image(img4, width=30)
 
 # Content in the right column based on the selected section
 with right_column:
@@ -138,7 +128,7 @@ with right_column:
     elif st.session_state.current_section == 'Contact':
       for img_path, link, text in [
         ('./linkedin.png', 'https://www.linkedin.com/in/ayushjha6104/', 'Ayush Jha - Linkedin'),
-        ('./phone.png', 'tel:7084683701', 'Phone'),
+        ('./phone.png', 'tel:+1234567890', 'Phone'),
         ('./gmail.png', 'mailto:jha2004ayush@gmail.com', 'Email'),
         ('./github1.png', 'https://github.com/mysteriouscoder610', 'GitHub')
     ]:
