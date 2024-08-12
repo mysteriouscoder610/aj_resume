@@ -138,7 +138,7 @@ with right_column:
     elif st.session_state.current_section == 'Contact':
       for img_path, link, text in [
         ('./linkedin.png', 'https://www.linkedin.com/in/ayushjha6104/', 'Ayush Jha - Linkedin'),
-        ('./phone.png', 'tel:+7084683701', 'Phone'),
+        ('./phone.png', 'tel:7084683701', 'Phone'),
         ('./gmail.png', 'mailto:jha2004ayush@gmail.com', 'Email'),
         ('./github1.png', 'https://github.com/mysteriouscoder610', 'GitHub')
     ]:
