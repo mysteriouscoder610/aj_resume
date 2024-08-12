@@ -74,7 +74,7 @@ def txt4(a, b, c):
 # Add buttons to the left column (like a resume section)
 with left_column:
     
-    image = Image.open('ayush.jpg')
+    image = Image.open('sagun.jpg')
     st.image(image, width=200)
 
     st.write("# AYUSH JHA")
