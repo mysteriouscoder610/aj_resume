@@ -12,7 +12,7 @@ if 'current_section' not in st.session_state:
 st.markdown("""
     <style>
     .main {
-        background: linear-gradient(to right, #46b8fa,#9ee6ef );
+        background: linear-gradient(to right, #5aeded,#ffffff );
         padding: 20px;
         border-radius: 15px;
     }
@@ -123,7 +123,7 @@ with right_column:
         st.markdown('<div class="centered-text"><h1>EXPERIENCE</h1></div>', unsafe_allow_html=True)
         st.write("This section showcases the user's work experience. Include job titles, companies, years of work, and responsibilities.")
         
-    elif st.session_state.current_section == 'Education':
+    elif st.session_state.current_section == 'Education': 
         st.markdown('<div class="centered-text"><h1>ACHIEVEMENTS</h1></div>', unsafe_allow_html=True)
         st.write("This section covers the user's achievements. Include notable awards, recognitions, and accomplishments.")
         
@@ -133,10 +133,10 @@ with right_column:
 
     elif st.session_state.current_section == 'Contact':
       for img_path, link, text in [
-        ('./linkedin.png', 'https://www.linkedin.com/in/ayushjha6104/', 'Ayush Jha - Linkedin'),
-        ('./phone.png', 'tel:+1234567890', 'Phone'),
-        ('./gmail.png', 'mailto:jha2004ayush@gmail.com', 'Email'),
-        ('./github1.png', 'https://github.com/mysteriouscoder610', 'GitHub')
+        ('./linkedin.png', 'https://www.linkedin.com/in/ayushjha6104/', '  Ayush Jha - Linkedin'),
+        ('./phone.png', 'tel:+1234567890', '  Phone'),
+        ('./gmail.png', 'mailto:jha2004ayush@gmail.com', '  Email'),
+        ('./github1.png', 'https://github.com/mysteriouscoder610', '  GitHub')
     ]:
         col1, col2 = st.columns([0.2, 4])
         with col1:
