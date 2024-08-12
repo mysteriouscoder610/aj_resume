@@ -8,9 +8,15 @@ st.set_page_config(layout="wide")
 if 'current_section' not in st.session_state:
     st.session_state.current_section = 'Profile'
 
-# Custom CSS to style the buttons to look like resume sections
+# Custom CSS to style the buttons and apply a gradient background
 st.markdown("""
     <style>
+    .main {
+        background: linear-gradient(to right, #e0eafa, #ffffff);
+        padding: 20px;
+        border-radius: 15px;
+    }
+
     .stButton > button {
         width: 100%;
         margin-bottom: 10px;
