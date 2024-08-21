@@ -12,7 +12,7 @@ if 'current_section' not in st.session_state:
 st.markdown("""
     <style>
     .main {
-        background: linear-gradient(to right, #5aeded,#94ebeb );
+        background: linear-gradient(to right, #B4F3A1,#FFFFFF );
         padding: 20px;
         border-radius: 15px;
     }
